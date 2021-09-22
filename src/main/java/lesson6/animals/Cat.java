@@ -5,7 +5,7 @@ import lesson6.Animal;
 public class Cat extends Animal {
     protected String color;
 
-    public Cat(String name, int runLimit, float jumpLimit, String color) {
+    public Cat(String name, double runLimit, double jumpLimit, String color) {
         this.name = name;
         this.runLimit = runLimit;
         this.jumpLimit = jumpLimit;
@@ -13,8 +13,8 @@ public class Cat extends Animal {
     }
 
     @Override
-    public void swim(int length) {
-        System.out.println(name + " не умеет плавать!");
+    public void swim(double length) {
+        System.out.printf("%s не умеет плавать!%n", name);
     }
 
     public void meow() {

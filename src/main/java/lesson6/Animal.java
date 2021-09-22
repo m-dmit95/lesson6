@@ -2,41 +2,41 @@ package lesson6;
 
 public class Animal {
     protected String name;
-    protected int runLimit;
-    protected int swimLimit;
-    protected float jumpLimit;
+    protected double runLimit;
+    protected double swimLimit;
+    protected double jumpLimit;
 
     public Animal() {
     }
 
-    public Animal(String name, int runLimit, int swimLimit, float jumpLimit) {
+    public Animal(String name, double runLimit, double swimLimit, double jumpLimit) {
         this.name = name;
         this.runLimit = runLimit;
         this.swimLimit = swimLimit;
         this.jumpLimit = jumpLimit;
     }
 
-    public void run(int length) {
+    public void run(double length) {
         if (length <= runLimit) {
-            System.out.println(name + " пробежал " + length + " метров.");
+            System.out.printf("%s пробежал %.2f метров.%n", name, length);
         } else {
-            System.out.println(name + " не может пробежать более " + runLimit + " метров!");
+            System.out.printf("%s не может пробежать более %.2f метров!%n", name, runLimit);
         }
     }
 
-    public void swim(int length) {
+    public void swim(double length) {
         if (length <= swimLimit) {
-            System.out.println(name + " проплыл " + length + " метров.");
+            System.out.printf("%s проплыл %.2f метров.%n", name, length);
         } else {
-            System.out.println(name + " не может проплыть более " + swimLimit + " метров!");
+            System.out.printf("%s не может проплыть более %.2f метров!%n", name, swimLimit);
         }
     }
 
-    public void jump(float height) {
+    public void jump(double height) {
         if (height <= jumpLimit) {
-            System.out.println(name + " прыгнул на " + height + " метров.");
+            System.out.printf("%s прыгнул на %.2f метров.%n", name, height);
         } else {
-            System.out.println(name + " не может прыгнуть больше, чем на " + jumpLimit + " метров!");
+            System.out.printf("%s не может прыгнуть больше, чем на %.2f метров!%n", name, jumpLimit);
         }
     }
 }
